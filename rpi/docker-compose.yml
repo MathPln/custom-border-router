@@ -1,0 +1,14 @@
+services:
+  otbr:
+    image: openthread/otbr:latest
+    container_name: otbr
+    network_mode: host
+    privileged: true
+    sysctls:
+      - net.ipv6.conf.all.forwarding=1
+    volumes:
+      # Mappe le port USB de la Raspberry Pi vers le conteneur
+      - /dev/ttyACM0:/dev/ttyACM0
+    command: >
+      --radio-url "spinel+hdlc+uart:///dev/ttyACM0?baudrate=115200"
+    restart: unless-stopped
