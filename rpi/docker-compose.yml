@@ -1,14 +1,39 @@
 services:
   otbr:
-    image: openthread/otbr:latest
+    image: openthread/otbr:sha-8146f98
     container_name: otbr
     network_mode: host
-    privileged: true
-    sysctls:
-      - net.ipv6.conf.all.forwarding=1
-    volumes:
-      # Mappe le port USB de la Raspberry Pi vers le conteneur
-      - /dev/ttyACM0:/dev/ttyACM0
-    command: >
-      --radio-url "spinel+hdlc+uart:///dev/ttyACM0?baudrate=115200"
     restart: unless-stopped
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0:rwm
+    environment:
+      - RADIO_URL=spinel+hdlc+uart:///dev/ttyACM0?uart-baudrate=460800&uart-flow-control
+      - BACKBONE_INTERFACE=eth0
+      - WEB_GUI=1
+      - REST_API=1
+      - NAT64=0
+      - FIREWALL=0
+
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: homeassistant
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - ./homeassistant:/config
+    environment:
+      - TZ=Europe/Paris
+    depends_on:
+      - otbr
+  matter-server:
+    image: ghcr.io/home-assistant-libs/python-matter-server:stable
+    container_name: matter-server
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - ./matter-server:/data
+    depends_on:
+      - homeassistant
