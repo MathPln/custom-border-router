@@ -1,0 +1,26 @@
+{
+  "toolchainPath": "c:\\ncs\\toolchains\\31f4403e35",
+  "sdkPath": "c:\\ncs\\v2.4.0",
+  "board": "nrf5340dk_nrf5340_cpuapp",
+  "boardDir": "c:/ncs/v2.4.0/zephyr/boards/arm/nrf5340dk_nrf5340",
+  "boardDirs": [
+    "c:/ncs/v2.4.0/zephyr/boards/arm/nrf5340dk_nrf5340"
+  ],
+  "optimizations": "none",
+  "cmakeArgs": [],
+  "confFiles": [
+    "prj.conf"
+  ],
+  "buildDirectory": "build",
+  "kconfigFragments": [
+    "overlay-usb.conf",
+    "overlay-logging.conf"
+  ],
+  "snippets": [],
+  "dtcOverlays": [
+    "boards/nrf5340dk_nrf5340_cpuapp.overlay"
+  ],
+  "extraDtcOverlays": [
+    "usb.overlay"
+  ]
+}

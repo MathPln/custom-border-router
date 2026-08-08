@@ -1,0 +1,13 @@
+# Target labels
+ 802154_rpmsg_subimage
+# Source files and their labels
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/CMakeFiles/802154_rpmsg_subimage
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/CMakeFiles/802154_rpmsg_subimage.rule
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/CMakeFiles/802154_rpmsg_subimage-complete.rule
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/802154_rpmsg_subimage-prefix/src/802154_rpmsg_subimage-stamp/802154_rpmsg_subimage-build.rule
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/802154_rpmsg_subimage-prefix/src/802154_rpmsg_subimage-stamp/802154_rpmsg_subimage-configure.rule
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/802154_rpmsg_subimage-prefix/src/802154_rpmsg_subimage-stamp/802154_rpmsg_subimage-download.rule
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/802154_rpmsg_subimage-prefix/src/802154_rpmsg_subimage-stamp/802154_rpmsg_subimage-install.rule
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/802154_rpmsg_subimage-prefix/src/802154_rpmsg_subimage-stamp/802154_rpmsg_subimage-mkdir.rule
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/802154_rpmsg_subimage-prefix/src/802154_rpmsg_subimage-stamp/802154_rpmsg_subimage-patch.rule
+C:/ncs/v2.4.0/nrf/samples/openthread/coprocessor/build/modules/nrf/samples/802154_rpmsg_subimage-prefix/src/802154_rpmsg_subimage-stamp/802154_rpmsg_subimage-update.rule
